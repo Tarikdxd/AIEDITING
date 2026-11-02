@@ -1,0 +1,18 @@
+{
+  "name": "@aiediting/cli",
+  "version": "0.1.0",
+  "type": "module",
+  "publishConfig": {"access": "public"},
+  "description": "aiediting CLI: create, plan, inspect, render and verify AI video editing projects",
+  "bin": {
+    "aiediting": "./bin.mjs"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@aiediting/media": "workspace:*",
+    "@aiediting/mcp-server": "workspace:*",
+    "@aiediting/mcp-tools": "workspace:*"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "width": 640,
+  "height": 360,
+  "duration": 3,
+  "title": "AIEDITING",
+  "eyebrow": "FLOW",
+  "theme": {
+    "bg": "#08080d",
+    "fg": "#f7f7fb",
+    "muted": "#9a9ab0",
+    "accent": "#8b5cf6",
+    "accent2": "#22d3ee",
+    "font": "Inter"
+  },
+  "nodes": [
+    {
+      "label": "Brief",
+      "note": "intent",
+      "color": "#8b5cf6"
+    },
+    {
+      "label": "Plan",
+      "note": "timeline",
+      "color": "#22d3ee"
+    },
+    {
+      "label": "Render",
+      "note": "engines",
+      "color": "#a78bfa"
+    },
+    {
+      "label": "QA",
+      "note": "verify",
+      "color": "#34d399"
+    }
+  ]
+}

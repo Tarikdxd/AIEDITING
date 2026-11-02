@@ -1,0 +1,27 @@
+{
+  "name": "@aiediting/engines",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@aiediting/adapter-blender": "workspace:*",
+    "@aiediting/adapter-ffmpeg": "workspace:*",
+    "@aiediting/adapter-hyperframes": "workspace:*",
+    "@aiediting/adapter-motion-canvas": "workspace:*",
+    "@aiediting/adapter-mpt": "workspace:*",
+    "@aiediting/adapter-remotion": "workspace:*",
+    "@aiediting/adapter-sdk": "workspace:*",
+    "@aiediting/adapter-stykanimate": "workspace:*"
+  }
+}

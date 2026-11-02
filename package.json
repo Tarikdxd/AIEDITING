@@ -1,0 +1,40 @@
+{
+  "name": "aiediting",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI-native video editing framework: one project format, many engines, MCP + CLI + skills",
+  "license": "Apache-2.0",
+  "type": "module",
+  "packageManager": "pnpm@12.16.1",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "pnpm -r --filter './packages/**' build && pnpm --filter @aiediting/cli build",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "schema": "tsx scripts/generate-schema.ts",
+    "lint": "tsc --noEmit -p tsconfig.json",
+    "cli": "tsx apps/cli/src/index.ts",
+    "mcp": "tsx packages/mcp-server/src/bin.ts",
+    "doctor": "tsx apps/cli/src/index.ts doctor",
+    "example": "tsx scripts/example.ts",
+    "clean": "node scripts/clean.mjs"
+  },
+  "devDependencies": {
+    "@aiediting/adapter-ffmpeg": "workspace:*",
+    "@aiediting/adapter-sdk": "workspace:*",
+    "@aiediting/core": "workspace:*",
+    "@aiediting/media": "workspace:*",
+    "@aiediting/planner": "workspace:*",
+    "@aiediting/project-schema": "workspace:*",
+    "@aiediting/renderer": "workspace:*",
+    "@aiediting/timeline": "workspace:*",
+    "@types/node": "^22.15.0",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.0"
+  }
+}
